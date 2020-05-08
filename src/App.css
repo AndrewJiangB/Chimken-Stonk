@@ -4,19 +4,43 @@
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(30px + 2vmin);
+  font-size: calc(14px + 2vmin);
   color: rgb(57, 215, 255);
+}
+
+.body{
+  display:flex; 
+  flex-direction:row;
 }
 
 .App-header {
   display: flex;
   flex-direction: column;
+  border: solid green 3px;
+  font-size: calc(30px + 2vmin);
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar {
+  border: dotted azure 3px;
+  display: inline-block;
 }
 
+.search {
+  border: dashed antiquewhite 3px;
+}
+
+.user {
+  border:dashed purple 3px;
+  font-size: 100%;
+}
+
+.main-content {
+  border: dotted peru 3px;
+}
+
+.navigation {
+  border: dashed darkseagreen 3px;
+}
 
 .App-logo {
   height: 40vmin;
