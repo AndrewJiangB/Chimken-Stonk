@@ -1,8 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Search from './Search.js';
 
-class Table extends Component {
-  render() {
-    return (
+import { useSelector } from 'react-redux';
+
+const Table = () => {
+  const searchQuery = useSelector(state => state.search);
+  const stocks = useSelector(state => state.stocks);
+
+  const filtered = searchQuery ? stocks.filter(stonk => stonk.name.toLowerCase().includes(searchQuery)) : stocks;
+
+  return (
+    <div>
+      <Search />
       <table>
         <thead>
           <tr>
@@ -11,22 +20,20 @@ class Table extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Tesla</td>
-            <td>5000+-999</td>
-          </tr>
-          <tr>
-            <td>Apple</td>
-            <td>3000</td>
-          </tr>
-          <tr>
-            <td>Oil</td>
-            <td>-40</td>
-          </tr>
+          {
+            filtered.map((stonk, index) => {
+              return (
+                <tr key={index}>
+                  <td>{stonk.name}</td>
+                  <td>{stonk.price}</td>
+                </tr>
+              );
+            })
+          }
         </tbody>
       </table>
-    )
-  }
+    </div>
+  );
 }
 
-export default Table
+export default Table;

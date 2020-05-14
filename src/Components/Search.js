@@ -1,16 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { updateSearchAction } from 'helpers/actions';
 
-class Searchbar extends Component {
-  render() {
-    return(
-      <input
-          type="text"
-          className="input"
-          id="addInput"
-          placeholder="MONI IN DA BANK"
-        />
-    )
-  }
+const Search = () => {
+  const dispatch = useDispatch();
+
+  return(
+    <input
+      type="text"
+      className="input"
+      id="addInput"
+      placeholder="MONI IN DA BANK"
+      onChange={(event) => {
+        dispatch(updateSearchAction(event.target.value.toLowerCase()));
+      }}
+    />
+  );
 }
 
-export default Searchbar;
+export default Search;
