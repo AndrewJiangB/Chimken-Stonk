@@ -26,6 +26,13 @@ function App() {
             <Button label="europeen"/>
             <Button label="chynah"/>
           </div>
+              /**
+              * Init Alpha Vantage with your API key.
+              *
+              * @param {String} key
+              *   Your Alpha Vantage API key.
+              */
+              const alpha = alphavantage({ key: '1WZ54Y6ITWWPVOE4' });
           <Table/>
         </div>
       </div>
