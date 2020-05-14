@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Searchbar from './Components/Search.js';
 import Button from './Components/Button.js';
 import Table from './Components/Table.js';
 
@@ -12,9 +11,6 @@ function App() {
       </header>
       <div className="body">
         <div className="sidebar">
-          <div className="search">
-            <Searchbar />
-          </div>
           <div className="user">
             User's profile
           </div>
