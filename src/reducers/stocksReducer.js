@@ -1,7 +1,9 @@
+import getData from '../helpers/jsonParser';
+
 // Haha... hahaha... stocks reducer
 const initialState = [
   {name: 'Tesla', price: '5000+-999'},
-  {name: 'Apple', price: '3000'},
+  getData(),
   {name: 'Oil', price: '-40'}
 ];
 
