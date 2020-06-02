@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import searchReducer from './searchReducer';
-import stocksReducer from './stocksReducer';
+import posts from './stocksReducer';
 
 export default combineReducers({
   search: searchReducer,
-  stocks: stocksReducer
+  stocks: posts
 });

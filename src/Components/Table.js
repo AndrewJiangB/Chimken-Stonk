@@ -21,7 +21,7 @@ const Table = () => {
         </thead>
         <tbody>
           {
-            filtered.map((stonk, index) => {
+            [filtered].map((stonk, index) => {
               return (
                 <tr key={index}>
                   <td>{stonk.name}</td>
